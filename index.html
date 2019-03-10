@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>ING Luis</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" type="text/css" href="stilo.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+</head>
+<body ng-app=myApp>
+  <script type="text/javascript">
+     var app = angular.module("myApp",["ngRoute"]);
+app.config(function($routeProvider){
+$routeProvider. when("/prueb",{
+  templateUrl: "prueb.htm"
+}).when("/requisitos",{
+  templateUrl: "requisitos.html"
+}).when("/prue",{
+  templateUrl : "prue.html"
+}).when("/in",{ 
+  templateUrl : "in.html"
+}).when("/rp",{
+  templateUrl : "rp.html"
+})
+});
+  </script>
+<h2>Proceso de residencias profesionales</h2><br>
+<h3>Residencias</h3>
+<p>La Residencia Profesional es una estrategia educativa, que permite al estudiante incorporarse profesionalmente, antes de egresar,al entorno laboral a través del desarrollo de proyectos, definidos entre la institución educativa y la empresa.</p>
+<p>La Residencia Profesional se realiza con apoyo de asesorías académico-empresariales.</p>
+<div></div>
+<header>
+  <h2>Los objetivos planteados dentro de la Residencia Profesional son:</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#!requisitos">Requisitos</a></li>
+      <li><a href="#!in">Opciones para la realización de la Residencia Profesional</a></li>
+      <li><a href="#!rp">Reporte Final</a></li>
+      <li><a href="#!prue">Asesores de Residencias Profesionales</a></li>
+      <li><a href="#!prueb">Preguntas Frecuentes</a></li>
+      <li><a href="#">Inicio</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h2>Para la Empresa:</h2>
+    <ul class="a"><li>Coadyuvar la información cualitativa y cuantitativa de los alumnos.</li>
+    <li>Beneficiar a los participantes con la elaboración de proyectos actuales.</li>
+    <li>Planear el desarrollo de los recursos humanos de los participantes.</li>
+    </ul>
+<h2>Para el Tecnológico:</h2>
+<ul class="a">
+  <li>Formar profesionistas acordes a losrequerimientos de su entorno y al perfil profesional de las carreras que orferta, cumpliendo así con su misión.</li>
+</ul>
+<h2>Para el(la) Alumno(a):</h2>
+<ul class="a">
+  <li>Integrarse a la problemática laboral y empresarial a la que se enfrentará en el ejercicio de su profesión aportando su mejor esfuerzo y sus conocimientos con una mentalidad creativa que le conduzca al éxito en su realización personal, profesional y económica.</li>
+</ul>
+<div ng-view></div>
+      </article>
+</section>
+
+<footer>
+  <p>ITSM</p>
+  <p>Telefonos:</p>
+  <p>01 (235) 323 15 45 Ext. 01 800 696 1394</p>
+  <p>www.itsm.edu.mx</p>
+</footer>
+
+</body>
+</html>
